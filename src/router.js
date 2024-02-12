@@ -1,8 +1,8 @@
-import { getUsers } from "./controllers/getUsers.js";
-import { getUserById } from "./controllers/getUserById.js";
-import { createUser } from "./controllers/createUser.js";
-import { updateUserById } from "./controllers/updateUserById.js";
-import { deleteUserById } from "./controllers/deleteUserById";
+import { getUsers } from "../controllers/getUsers.js";
+import { getUserById } from "../controllers/getUserById.js";
+import { createUser } from "../controllers/createUser.js";
+import { updateUserById } from "../controllers/updateUserById.js";
+import { deleteUserById } from "../controllers/deleteUserById.js";
 
 export const userRoutes = async (req, res) => {
   if (req.url === "/api/users" && req.method === "GET") {
@@ -23,6 +23,6 @@ export const userRoutes = async (req, res) => {
     deleteUserById(req, res, userId);
   } else {
     res.writeHead(404, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ message: "Route not found" }));
+    res.end(JSON.stringify({ message: "Resource not found" }));
   }
 };
