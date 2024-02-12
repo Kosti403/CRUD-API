@@ -1,8 +1,8 @@
-import { getUsers } from "../controllers/getUsers.js";
-import { getUserById } from "../controllers/getUserById.js";
-import { createUser } from "../controllers/createUser.js";
-import { updateUserById } from "../controllers/updateUserById.js";
-import { deleteUserById } from "../controllers/deleteUserById.js";
+import { getUsers } from "./controllers/getUsers.js";
+import { getUserById } from "./controllers/getUserById.js";
+import { createUser } from "./controllers/createUser.js";
+import { updateUserById } from "./controllers/updateUserById.js";
+import { deleteUserById } from "./controllers/deleteUserById.js";
 
 export const userRoutes = async (req, res) => {
   if (req.url === "/api/users" && req.method === "GET") {
